@@ -340,7 +340,7 @@ async def interact(update, botname, username, new):
         if vs['neg'] > 1:
             await update.message.reply_text('I do not think I could provide you a good answer for this. Use /retry to get positive output.')
             return
-        update.message.reply_text(out)
+        await update.message.reply_text(out)
         chat_log = append_interaction_to_chat_log(
             username, botname, question, answer, chat_log)  # type: ignore
         if debug == True:
