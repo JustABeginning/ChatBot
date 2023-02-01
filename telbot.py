@@ -264,11 +264,11 @@ def append_interaction_to_chat_log(question, answer, chat_log=None):
 def ask(question, chat_log=None):
     if chat_log is None:
         chat_log = 'The following is a chat between two users:\n\n'
-    #    now = datetime.now()
-    #    ampm = now.strftime("%I:%M %p")
-    #    t = '[' + ampm + '] '
-    #    prompt = f'{chat_log}{t}{USERNAME}: {question}\n{t}{BOTNAME}:'
-    response = completion.create(prompt=question, engine="text-davinci-003",
+    now = datetime.now()
+    ampm = now.strftime("%I:%M %p")
+    t = '[' + ampm + '] '
+    prompt = f'{chat_log}{t}{USERNAME}: {question}\n{t}{BOTNAME}:'
+    response = completion.create(prompt=prompt, engine="text-davinci-003",
                                  temperature=0.5, frequency_penalty=0.5,
                                  presence_penalty=0.5, best_of=3, max_tokens=500)
     answer = response.choices[0].text.strip()  # type: ignore

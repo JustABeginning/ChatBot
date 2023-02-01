@@ -1,2 +1,3 @@
-# ChatBot
+# TelBot
+
 Simple Telegram Bot
