@@ -311,8 +311,8 @@ async def interact(update, new):
             print(CHAT_LOG)
             print('-----END CHAT LOG-----\n')
     except Exception as e:
-        print(e)
         errstr = str(e)
+        print('\nException ::\n' + errstr)
         await update.message.reply_text(errstr)
 
 
