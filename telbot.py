@@ -302,11 +302,7 @@ async def interact(update, new):
             print("Input :\n" + question)  # type: ignore
             print("\nOutput :\n" + answer)  # type: ignore
             print("\n====================\n")
-        stripes = answer.encode(  # type: ignore
-            encoding=sys.stdout.encoding, errors='ignore')
-        decoded = stripes.decode("utf-8")
-        out = str(decoded)
-        await update.message.reply_text(out)
+        await update.message.reply_text(answer)
         CHAT_LOG = append_interaction_to_chat_log(
             question, answer, CHAT_LOG)  # type: ignore
         if DEBUG is True:
