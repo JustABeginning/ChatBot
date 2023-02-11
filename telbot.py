@@ -6,7 +6,6 @@
 
 import logging
 import os
-import sys
 import threading
 import time
 import re
