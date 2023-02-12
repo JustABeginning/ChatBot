@@ -67,13 +67,13 @@ TIMSTART = 300
 TIM = 1
 
 # Defaults
-USER = "user"
+USER = "username"
 RUNNING = False
 CACHE = None
 QCACHE = None
 CHAT_LOG = None
-BOTNAME = 'botname'
-USERNAME = 'username'
+BOTNAME = 'bot'
+USERNAME = 'user'
 # Max chat log length (A token is about 4 letters and max tokens is 2048)
 MAX = int(3000)
 
